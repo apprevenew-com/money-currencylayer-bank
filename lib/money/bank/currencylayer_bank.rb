@@ -13,8 +13,8 @@ class Money
       # Add method to reset the build in memory store
       # @param [Hash] rtd Optional initial exchange rate data.
       # @return [Object] store.
-      def reset!(rtd = {})
-        transaction { @index = rtd }
+      def reset!(rates = {})
+        transaction { @rates = rates }
       end
     end
   end
